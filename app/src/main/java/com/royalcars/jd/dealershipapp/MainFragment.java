@@ -12,7 +12,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -60,7 +62,7 @@ public class MainFragment extends Fragment {
 
     TextView text_detail_car1, text_detail_car2, text_detail_car3,text_detail_car4 , text_detail_car5 ,text_detail_car6 ,text_detail_car7 , text_detail_car8 , text_detail_car9;
 
-    TextView ui1,ui2,ui3;
+    TextView ui1,ui2,ui3,ui4,ui5,ui6;
 
     TextView id1 , id2 , id3 , id4 , id5 , id6 , id7;
 
@@ -68,11 +70,17 @@ public class MainFragment extends Fragment {
 
     CardView car_one , car_two , car_tree , car_four, car_five , car_six , car_seven , car_eight , car_nine;
 
-    TextView btndetail , btndetail1 , btndetail2;
+    TextView txvw_41 , txvw_42 , txt_price41 , txw_51,txw_52,txt_price51 , txw_61 , txw_62 , txt_price61;
+
+    ImageView car_image41, car_image51, car_image61;
+
+    TextView btndetail , btndetail1 , btndetail2, btndetail4, btndetail5, btndetail6;
 
     LinearLayout Frame1 , Frame2 ;
 
     FragmentManager fm;
+
+    private static final String TAG = "MainFragment";
 
     DatabaseReference mRequest;
 
@@ -123,6 +131,121 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
+        final ScrollViewText scrollTextView = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically);
+        scrollTextView.startScroll();
+
+        final ScrollViewText scrollTextView1 = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically1);
+        scrollTextView1.startScroll();
+
+        final ScrollViewText scrollTextView2 = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically2);
+        scrollTextView2.startScroll();
+
+        final ScrollViewText scrollTextView4 = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically4);
+        scrollTextView4.startScroll();
+
+        final ScrollViewText scrollTextView5 = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically5);
+        scrollTextView5.startScroll();
+
+        final ScrollViewText scrollTextView6 = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically6);
+        scrollTextView6.startScroll();
+
+        //Pause ACTION_DOWN, resume scroll otherwise.
+        scrollTextView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        scrollTextView1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView1.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView1.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView1.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        scrollTextView2.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView2.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView2.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView2.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        scrollTextView4.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView4.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView4.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView4.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        scrollTextView5.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView5.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView5.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView5.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        scrollTextView6.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                //https://developer.android.com/training/gestures/detector.html
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    scrollTextView6.pauseScroll();
+                    Log.i(TAG, "Round duration: " + scrollTextView6.getRoundDuration());
+                    return true;
+                }else if(motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    scrollTextView6.resumeScroll();
+                    return true;
+                }
+                return false;
+            }
+        });
+
        // Toast.makeText(getActivity(), "Vista Creada", Toast.LENGTH_SHORT).show();
 
         car_one= view.findViewById(R.id.cardview);
@@ -145,6 +268,9 @@ public class MainFragment extends Fragment {
         btndetail= view.findViewById(R.id.btndetail);
         btndetail1= view.findViewById(R.id.btndetail1);
         btndetail2 =  view.findViewById(R.id.btndetai2);
+        btndetail4 =  view.findViewById(R.id.btndetail4);
+        btndetail5 =  view.findViewById(R.id.btndetail5);
+        btndetail6 =  view.findViewById(R.id.btndetai6);
         Frame1 =  view.findViewById(R.id.LinearLayout1);
         Frame2 =  view.findViewById(R.id.LinearLayout2);
 
@@ -160,6 +286,9 @@ public class MainFragment extends Fragment {
         card_view_image7= view.findViewById(R.id.cardview_car7);
         card_view_image8= view.findViewById(R.id.cardview_car8);
         card_view_image9= view.findViewById(R.id.cardview_car9);
+        car_image41= view.findViewById(R.id.imageview4);
+        car_image51= view.findViewById(R.id.imageview5);
+        car_image61= view.findViewById(R.id.imageview633);
 
         // Control precio carros
 
@@ -173,6 +302,8 @@ public class MainFragment extends Fragment {
         price_car7 = view.findViewById(R.id.price_car7);
         price_car8 = view.findViewById(R.id.price_car8);
         price_car9 = view.findViewById(R.id.price_car9);
+        txt_price41= view.findViewById(R.id.textView411);
+        txt_price61= view.findViewById(R.id.textView631);
 
         //
 
@@ -220,11 +351,23 @@ public class MainFragment extends Fragment {
         textView7 = view.findViewById(R.id.textView32);
         textView8 = view.findViewById(R.id.textView33);
 
+        txvw_41 = view.findViewById(R.id.textView41);
+        txvw_42 = view.findViewById(R.id.textView42);
+        txw_51 =  view.findViewById(R.id.textView51);
+        txw_52 =  view.findViewById(R.id.textView52);
+        txw_61=  view.findViewById(R.id.textView61);
+        txw_62=  view.findViewById(R.id.textView62);
+        txt_price51 = view.findViewById(R.id.textView533);
+
         //Indicadores
 
         ui1= view.findViewById(R.id.ui1);
         ui2= view.findViewById(R.id.ui2);
         ui3= view.findViewById(R.id.ui3);
+        ui4= view.findViewById(R.id.ui4);
+        ui5= view.findViewById(R.id.ui5);
+        ui6= view.findViewById(R.id.ui6);
+
 
 
         id1= view.findViewById(R.id.car_id);
@@ -249,7 +392,110 @@ public class MainFragment extends Fragment {
         requestOptions.error(R.drawable.bmw_car_img);
 
 
-       btndetail.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui1.getText().toString());
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        imageView1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui2.getText().toString());
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        imageView2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui3.getText().toString());
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+
+        btndetail.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -353,6 +599,78 @@ public class MainFragment extends Fragment {
             }
         });
 
+        btndetail4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui4.getText().toString());
+
+                // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        car_image41.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui4.getText().toString());
+
+                // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
         btnprice.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -389,7 +707,79 @@ public class MainFragment extends Fragment {
             }
         });
 
+        card_view_image.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id1.getText().toString());
+
+                // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
         btnprice1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id2.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        card_view_image1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -461,6 +851,42 @@ public class MainFragment extends Fragment {
             }
         });
 
+        card_view_image2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id3.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
         btnprice3.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -497,7 +923,80 @@ public class MainFragment extends Fragment {
             }
         });
 
+        card_view_image3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id4.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+
         btnprice4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id5.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        card_view_image4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -568,6 +1067,116 @@ public class MainFragment extends Fragment {
 
             }
         });
+
+        card_view_image5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",id6.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        btndetail5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui5.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        car_image51.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("nombre",ui5.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+
 
         mRequest = FirebaseDatabase.getInstance().getReference().child("images");
 
@@ -684,15 +1293,33 @@ public class MainFragment extends Fragment {
                             .load(Imagen)
                             .into(card_view_image3);
 
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image41);
+
+                    txt_price41.setText("$ "+precio);
+
+                    txvw_41.setText(vehiculo);
+                    txvw_42.setText(detalle);
                     price_car3.setText("$ "+precio);
                     text_car3.setText(vehiculo);
                     text_detail_car3.setText(detalle);
+
+                    ui4.setText(ui);
 
                     id4.setText(ui);
 
                 }
 
                 if (numero == 5){
+
+                    txw_51.setText(vehiculo);
+                    txw_52.setText(detalle);
+                    ui5.setText(ui);
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image51);
+                    txt_price51.setText("$ "+precio);
 
                     car_five.setVisibility(View.VISIBLE);
 
@@ -709,6 +1336,17 @@ public class MainFragment extends Fragment {
                 }
 
                 if (numero == 6){
+
+                    txw_61.setText(vehiculo);
+                    txw_62.setText(detalle);
+
+                    ui6.setText(ui);
+                    txt_price61.setText("$ "+precio);
+
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image61);
+
 
                     car_six.setVisibility(View.VISIBLE);
 

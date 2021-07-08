@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:gravity="center">
 
@@ -122,34 +123,28 @@
 
 
     <LinearLayout
-        android:id="@+id/LinearLayout1"
         android:visibility="gone"
+        android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scrollbars="none">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:padding="8dp">
-
                         <androidx.cardview.widget.CardView
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
@@ -312,7 +307,22 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/background_red"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                             </LinearLayout>
 
 
@@ -480,7 +490,22 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/background_red"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                             </LinearLayout>
 
 
@@ -648,7 +673,22 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/background_red"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                             </LinearLayout>
 
 
@@ -657,7 +697,568 @@
                     </LinearLayout>
 
                 </HorizontalScrollView>
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="16dp">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="100">
+
+                                    <TextView
+                                        android:id="@+id/textView41"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="90"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="BMW X4 Sports"
+                                        android:textColor="#000000"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="10"
+                                        android:background="@drawable/light_orange_rounded_shape"
+                                        android:drawableLeft="@drawable/ic_star_yellow_24dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="6dp"
+                                        android:text="4.5"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="#ffc32d"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/textView42"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/calibri"
+                                    android:text="2019 • COMFORT CLASS"
+                                    android:textColor="#a4a7b5"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/seat_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="5"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/gate_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="4"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/bag_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="3"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/imageview4"
+                                    android:src="@drawable/bmw_car_img" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="100">
+
+                                    <TextView
+                                        android:id="@+id/textView411"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="$210"
+                                        android:textColor="#3f9dff"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/ui4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignEnd="@+id/textView411"
+                                        android:layout_alignRight="@id/textView411"
+                                        android:layout_marginEnd="-48dp"
+                                        android:layout_marginRight="-48dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="per day"
+                                        android:textColor="#8ac3ff"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/btndetail4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/blue_rounded_shape"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="8dp"
+                                        android:text="Detalle"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically4"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/colorAccent"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="100">
+
+                                    <TextView
+                                        android:id="@+id/textView51"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="90"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="BMW X4 Sports"
+                                        android:textColor="#000000"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="10"
+                                        android:background="@drawable/light_orange_rounded_shape"
+                                        android:drawableLeft="@drawable/ic_star_yellow_24dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="6dp"
+                                        android:text="4.5"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="#ffc32d"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/textView52"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/calibri"
+                                    android:text="2019 • COMFORT CLASS"
+                                    android:textColor="#a4a7b5"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/seat_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="5"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/gate_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="4"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/bag_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="3"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imageview5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/bmw_car_img" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="100">
+
+                                    <TextView
+                                        android:id="@+id/textView533"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="$210"
+                                        android:textColor="#3f9dff"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/ui5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignEnd="@+id/textView533"
+                                        android:layout_alignRight="@id/textView533"
+                                        android:layout_marginEnd="-48dp"
+                                        android:layout_marginRight="-48dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="per day"
+                                        android:textColor="#8ac3ff"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/btndetail5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/blue_rounded_shape"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="8dp"
+                                        android:text="Detalle"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically5"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/colorAccent"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="gone"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true"
+                            app:contentPadding="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal"
+                                    android:weightSum="100">
+
+                                    <TextView
+                                        android:id="@+id/textView61"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="90"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="BMW X4 Sports"
+                                        android:textColor="#000000"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="10"
+                                        android:background="@drawable/light_orange_rounded_shape"
+                                        android:drawableLeft="@drawable/ic_star_yellow_24dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="6dp"
+                                        android:text="4.5"
+                                        android:textAlignment="textEnd"
+                                        android:textColor="#ffc32d"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/textView62"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:fontFamily="@font/calibri"
+                                    android:text="2019 • COMFORT CLASS"
+                                    android:textColor="#a4a7b5"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/seat_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="5"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/gate_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="4"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:layout_width="16dp"
+                                        android:layout_height="16sp"
+                                        android:layout_marginRight="4dp"
+                                        android:src="@drawable/bag_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="6dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="3"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imageview633"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/bmw_car_img" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="100">
+
+                                    <TextView
+                                        android:id="@+id/textView631"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="$210"
+                                        android:textColor="#3f9dff"
+                                        android:textSize="24sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/ui6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignEnd="@+id/textView631"
+                                        android:layout_alignRight="@id/textView631"
+                                        android:layout_marginEnd="-48dp"
+                                        android:layout_marginRight="-48dp"
+                                        android:fontFamily="@font/calibri"
+                                        android:text="per day"
+                                        android:textColor="#8ac3ff"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/btndetai6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:background="@drawable/blue_rounded_shape"
+                                        android:fontFamily="@font/calibri"
+                                        android:padding="8dp"
+                                        android:text="Detalle"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically6"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@color/colorAccent"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -749,7 +1350,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="70"
                         android:orientation="vertical">
-
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

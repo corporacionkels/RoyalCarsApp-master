@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity
             }
 
 
+
         } else if (id == R.id.nav_viewInv) {
 
             Fragment selectedFragment = fm.findFragmentByTag("inv");
