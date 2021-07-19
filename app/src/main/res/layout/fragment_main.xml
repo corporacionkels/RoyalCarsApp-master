@@ -121,7 +121,11 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
+    <ImageView
+        android:id="@+id/imagesearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo" />
     <LinearLayout
         android:visibility="gone"
         android:id="@+id/LinearLayout1"
@@ -157,7 +161,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_isred"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -171,6 +190,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="90"
                                         android:fontFamily="@font/calibri"
+                                        android:maxLength="25"
                                         android:text="BMW X4 Sports"
                                         android:textColor="#000000"
                                         android:textSize="18sp"
@@ -199,6 +219,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="@font/calibri"
+                                    android:maxLength="40"
                                     android:text="2019 • COMFORT CLASS"
                                     android:textColor="#a4a7b5"
                                     android:textSize="14sp" />
@@ -307,22 +328,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically1"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="OFERTA OFERTA OFERTA"
-                                    android:textColor="@color/colorAccent"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@color/background_red"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -340,7 +346,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_isred"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -353,6 +374,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="90"
+                                        android:maxLength="25"
                                         android:fontFamily="@font/calibri"
                                         android:text="BMW X4 Sports"
                                         android:textColor="#000000"
@@ -382,6 +404,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="@font/calibri"
+                                    android:maxLength="40"
                                     android:text="2019 • COMFORT CLASS"
                                     android:textColor="#a4a7b5"
                                     android:textSize="14sp" />
@@ -490,22 +513,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="OFERTA OFERTA OFERTA"
-                                    android:textColor="@color/colorAccent"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@color/background_red"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -523,7 +531,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="OFERTA OFERTA OFERTA"
+                                    android:textColor="@color/colorAccent"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_isred"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -538,6 +561,7 @@
                                         android:layout_weight="90"
                                         android:fontFamily="@font/calibri"
                                         android:text="BMW X4 Sports"
+                                        android:maxLength="25"
                                         android:textColor="#000000"
                                         android:textSize="18sp"
                                         android:textStyle="bold" />
@@ -565,6 +589,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="@font/calibri"
+                                    android:maxLength="40"
                                     android:text="2019 • COMFORT CLASS"
                                     android:textColor="#a4a7b5"
                                     android:textSize="14sp" />
@@ -673,22 +698,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically2"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="OFERTA OFERTA OFERTA"
-                                    android:textColor="@color/colorAccent"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@color/background_red"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -718,7 +728,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically4"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_sold"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -733,8 +758,9 @@
                                         android:layout_weight="90"
                                         android:fontFamily="@font/calibri"
                                         android:text="BMW X4 Sports"
+                                        android:maxLength="40"
                                         android:textColor="#000000"
-                                        android:textSize="18sp"
+                                        android:textSize="14sp"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -761,8 +787,9 @@
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="@font/calibri"
                                     android:text="2019 • COMFORT CLASS"
+                                    android:maxLength="30"
                                     android:textColor="#a4a7b5"
-                                    android:textSize="14sp" />
+                                    android:textSize="10sp" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -868,22 +895,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically4"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="LUXURY LUXURY LUXURY LUXURY"
-                                    android:textColor="@color/color_black"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@color/colorAccent"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -901,7 +913,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically5"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_sold"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -916,8 +943,9 @@
                                         android:layout_weight="90"
                                         android:fontFamily="@font/calibri"
                                         android:text="BMW X4 Sports"
+                                        android:maxLength="30"
                                         android:textColor="#000000"
-                                        android:textSize="18sp"
+                                        android:textSize="14sp"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -944,8 +972,9 @@
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="@font/calibri"
                                     android:text="2019 • COMFORT CLASS"
+                                    android:maxLength="30"
                                     android:textColor="#a4a7b5"
-                                    android:textSize="14sp" />
+                                    android:textSize="10sp" />
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -1051,22 +1080,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically5"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="LUXURY LUXURY LUXURY LUXURY"
-                                    android:textColor="@color/color_black"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@color/colorAccent"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -1100,8 +1114,9 @@
                                         android:layout_weight="90"
                                         android:fontFamily="@font/calibri"
                                         android:text="BMW X4 Sports"
+                                        android:maxLength="30"
                                         android:textColor="#000000"
-                                        android:textSize="18sp"
+                                        android:textSize="12sp"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -1243,7 +1258,7 @@
                                     android:textColor="@color/color_black"
                                     android:textSize="30sp"
                                     android:textStyle="italic"
-                                    android:background="@color/colorAccent"
+                                    android:background="@drawable/background_sold"
                                     android:elevation="16dp"
                                     app:layout_constraintTop_toBottomOf="@+id/txtPoem"
                                     tools:layout_editor_absoluteX="0dp"
@@ -2714,5 +2729,7 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+
 
 </LinearLayout>

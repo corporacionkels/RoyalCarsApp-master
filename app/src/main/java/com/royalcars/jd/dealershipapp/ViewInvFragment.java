@@ -1,6 +1,7 @@
 package com.royalcars.jd.dealershipapp;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -48,14 +50,17 @@ public class ViewInvFragment extends Fragment {
     private boolean mTwoPane;
     private MainActivity activity;
 
+
     Boolean datos ;
 
     String imageUi;
 
     DatabaseReference mRequest;
 
+    private ProgressDialog nDialog;
 
-    ImageView car_image , car_image1 , car_image2 , car_image3 , car_image4 , car_image5;
+
+    ImageView car_image , car_image1 , car_image2 , car_image3 , car_image4 , car_image5 , ImageReturn;
 
     TextView model , model1 , model2 , model3, model4,model5;
 
@@ -132,6 +137,8 @@ public class ViewInvFragment extends Fragment {
             imageUi = nombre.replaceAll(" ","");
         }
 
+
+
       //  Toast.makeText(getActivity(), "Esta es la Clave "+imageUi, Toast.LENGTH_SHORT).show();
 
         car_image= view.findViewById(R.id.thumbnail);
@@ -156,6 +163,8 @@ public class ViewInvFragment extends Fragment {
         carframe5= view.findViewById(R.id.cardview8);
         carframe6= view.findViewById(R.id.cardview9);
 
+        ImageReturn= view.findViewById(R.id.imagereturn);
+
 
         String CodigoUi = "-MbRTqqMs97LFxJg8JOH";
 
@@ -163,6 +172,32 @@ public class ViewInvFragment extends Fragment {
 
         //
 
+        ImageReturn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new MainFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        nDialog = new ProgressDialog(getActivity());
+        nDialog.setMessage("Por Favor Espere..");
+        nDialog.setTitle("Cargando Detalle del Vehculo");
+        nDialog.setIndeterminate(false);
+        nDialog.setCancelable(true);
+        nDialog.show();
 
 
        // String driverId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -194,6 +229,7 @@ public class ViewInvFragment extends Fragment {
                // Toast.makeText(getActivity(),dataSnapshot.getKey() , Toast.LENGTH_SHORT).show();
 
                 if (numero == 1){
+                    nDialog.dismiss();
 
                     Glide.with(getActivity())
                             .load(Imagen)
@@ -323,6 +359,8 @@ public class ViewInvFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this

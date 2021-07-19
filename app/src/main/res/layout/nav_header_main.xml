@@ -27,6 +27,6 @@
         android:layout_gravity="center"
         android:text=" @Royalcars.ve"
         android:textStyle="bold"
-        android:textColor="@color/colorAccent" />
+        android:textColor="@color/color_white" />
 
 </LinearLayout>

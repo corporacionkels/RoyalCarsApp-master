@@ -1,6 +1,7 @@
 package com.royalcars.jd.dealershipapp;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -53,6 +54,8 @@ public class MainFragment extends Fragment {
 
     ImageView card_view_image5, card_view_image6 , card_view_image7 , card_view_image8 , card_view_image9;
 
+    ImageView ImageSearch;
+
     TextView textView , textView1 , textView2 , textView3 , textView4 , textView5, textView6 , textView7, textView8 , price_car ,text_car;
 
     TextView text_detail_car , price_car1,price_car2,price_car3,price_car4 , text_car1,text_car2,text_car3,text_car4;
@@ -77,6 +80,8 @@ public class MainFragment extends Fragment {
     TextView btndetail , btndetail1 , btndetail2, btndetail4, btndetail5, btndetail6;
 
     LinearLayout Frame1 , Frame2 ;
+
+    private ProgressDialog nDialog;
 
     FragmentManager fm;
 
@@ -386,6 +391,8 @@ public class MainFragment extends Fragment {
         btnprice3= view.findViewById(R.id.price_car3);
         btnprice4= view.findViewById(R.id.price_car4);
         btnprice5= view.findViewById(R.id.price_car5);
+
+        ImageSearch = view.findViewById(R.id.imagesearch);
 
         RequestOptions requestOptions=new RequestOptions();
         requestOptions.placeholder(R.drawable.bmw_car_img);
@@ -1176,6 +1183,12 @@ public class MainFragment extends Fragment {
             }
         });
 
+        nDialog = new ProgressDialog(getActivity());
+        nDialog.setMessage("Por Favor Espere..");
+        nDialog.setTitle("Cargando Listado de Vehiculos");
+        nDialog.setIndeterminate(false);
+        nDialog.setCancelable(true);
+        nDialog.show();
 
 
         mRequest = FirebaseDatabase.getInstance().getReference().child("images");
@@ -1190,6 +1203,8 @@ public class MainFragment extends Fragment {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 if(!dataSnapshot.exists()){return;}
+                ImageSearch.setVisibility(View.GONE);
+                nDialog.dismiss();
 
                 numero = numero + 1;
 
@@ -1429,6 +1444,7 @@ public class MainFragment extends Fragment {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+
 
      //  Picasso.with(getContext()).load("https://firebasestorage.googleapis.com/v0/b/royalcars-bf1a4.appspot.com/o/images%2FPolish_20210601_073203060.jpg?alt=media&token=3689c894-6560-4916-8e83-777fb05266fd")
      //           .into(imageView);
