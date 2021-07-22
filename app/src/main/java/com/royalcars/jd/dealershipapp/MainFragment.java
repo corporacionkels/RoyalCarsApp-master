@@ -50,6 +50,10 @@ public class MainFragment extends Fragment {
 
     Integer numero = 0;
 
+    Integer Micontador= 0;
+
+    Boolean ActivarVista = false;
+
     ImageView imageView , imageView1 , imageView2 , card_view_image , card_view_image1 , card_view_image2 , card_view_image3 , card_view_image4;
 
     ImageView card_view_image5, card_view_image6 , card_view_image7 , card_view_image8 , card_view_image9;
@@ -125,9 +129,14 @@ public class MainFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+         //   Toast.makeText(getActivity(), "Con Argumentos" + ActivarVista, Toast.LENGTH_SHORT).show();
+        } else{
+         //   Toast.makeText(getActivity(), "Sin Argumentos" + ActivarVista, Toast.LENGTH_SHORT).show();
         }
 
-        //Toast.makeText(getActivity(), "Formulario Creado", Toast.LENGTH_SHORT).show();
+        ActivarVista = true ;
+
+
     }
 
     @Override
@@ -135,6 +144,7 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
+
 
         final ScrollViewText scrollTextView = (ScrollViewText) view.findViewById(R.id.txtPoemProgramatically);
         scrollTextView.startScroll();
@@ -1208,8 +1218,6 @@ public class MainFragment extends Fragment {
 
                 numero = numero + 1;
 
-             //   Toast.makeText(getActivity(), dataSnapshot.child("imageUrl").getValue().toString(), Toast.LENGTH_SHORT).show();
-
                 String Imagen = dataSnapshot.child("imageUrl").getValue().toString();
 
                 String precio =  dataSnapshot.child("timestamp").getValue().toString();
@@ -1471,6 +1479,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
+       // Toast.makeText(getActivity(), "Regresando", Toast.LENGTH_SHORT).show();
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
@@ -1483,6 +1492,7 @@ public class MainFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+      // Toast.makeText(getActivity(), "Retornando", Toast.LENGTH_SHORT).show();
     }
 
     /**

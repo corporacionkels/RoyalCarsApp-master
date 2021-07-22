@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -115,6 +116,30 @@ public class ViewInvFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view_inv, container, false);
+
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                     //   getActivity().finish();
+                       // ()   Intent intent = new Intent(getActivity(), MainActivity.class);
+                      //  startActivity(intent);
+                        Fragment nuevoFragmento = new MainFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         Bundle datosRecuperados = getArguments();
         if (datosRecuperados == null) {
