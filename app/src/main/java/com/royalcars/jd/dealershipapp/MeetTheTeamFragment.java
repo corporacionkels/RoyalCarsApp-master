@@ -4,8 +4,11 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +75,29 @@ public class MeetTheTeamFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_meet_the_team, container, false);
 
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        //   getActivity().finish();
+                        // ()   Intent intent = new Intent(getActivity(), MainActivity.class);
+                        //  startActivity(intent);
+                        Fragment nuevoFragmento = new MainFragment();
+                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                        transaction.replace(R.id.content, nuevoFragmento);
+                        transaction.addToBackStack(null);
+
+                        // Commit a la transacción
+                        transaction.commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
         //creating list
         ArrayList<Employee> personList = new ArrayList<>();
         ArrayList<Integer> imagesOfEmployees = new ArrayList<>();
