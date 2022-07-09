@@ -52,6 +52,12 @@ public class MainFragment extends Fragment {
 
     Integer Micontador= 0;
 
+    Integer Mioferta = 0;
+
+    Integer Laoferta = 0;
+
+    Integer MiLuxury = 0;
+
     Boolean ActivarVista = false;
 
     ImageView imageView , imageView1 , imageView2 , card_view_image , card_view_image1 , card_view_image2 , card_view_image3 , card_view_image4;
@@ -71,7 +77,7 @@ public class MainFragment extends Fragment {
 
     TextView ui1,ui2,ui3,ui4,ui5,ui6;
 
-    TextView id1 , id2 , id3 , id4 , id5 , id6 , id7;
+    TextView id1 , id2 , id3 , id4 , id5 , id6 , id7 , id8;
 
     TextView btnprice , btnprice1 , btnprice2 , btnprice3 , btnprice4 , btnprice5;
 
@@ -92,6 +98,10 @@ public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
 
     DatabaseReference mRequest;
+
+    CardView oferta , oferta1 , oferta2;
+
+    CardView luxury , luxury1 , luxury2;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -392,6 +402,7 @@ public class MainFragment extends Fragment {
         id5= view.findViewById(R.id.car_id5);
         id6= view.findViewById(R.id.car_id6);
         id7= view.findViewById(R.id.car_id7);
+        id8= view.findViewById(R.id.car_id8);
 
         // Botones
 
@@ -401,6 +412,14 @@ public class MainFragment extends Fragment {
         btnprice3= view.findViewById(R.id.price_car3);
         btnprice4= view.findViewById(R.id.price_car4);
         btnprice5= view.findViewById(R.id.price_car5);
+
+        oferta = view.findViewById(R.id.oferta_cardview);
+        oferta1 = view.findViewById(R.id.oferta_cardview1);
+        oferta2 = view.findViewById(R.id.oferta_cardview2);
+
+        luxury = view.findViewById(R.id.luxury_cardview);
+        luxury1 = view.findViewById(R.id.luxury_cardview1);
+        luxury2 = view.findViewById(R.id.luxury_cardview2);
 
         ImageSearch = view.findViewById(R.id.imagesearch);
 
@@ -419,7 +438,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", textView2.getText().toString());
                 datosAEnviar.putString("nombre",ui1.getText().toString());
 
                 //
@@ -453,7 +472,8 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+
+                datosAEnviar.putString("edad", textView4.getText().toString());
                 datosAEnviar.putString("nombre",ui2.getText().toString());
 
                 //
@@ -487,7 +507,8 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", textView7.getText().toString());
+              //  datosAEnviar.putInt("edad", 21);
                 datosAEnviar.putString("nombre",ui3.getText().toString());
 
                 //
@@ -522,7 +543,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", textView2.getText().toString());
                 datosAEnviar.putString("nombre",ui1.getText().toString());
 
                 //
@@ -556,7 +577,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", textView4.getText().toString());
                 datosAEnviar.putString("nombre",ui2.getText().toString());
 
                 //
@@ -590,7 +611,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", textView7.getText().toString());
                 datosAEnviar.putString("nombre",ui3.getText().toString());
 
                // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -626,7 +647,9 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+              //  datosAEnviar.putInt("edad", 21);
+              //  txvw_42
+                datosAEnviar.putString("edad", txvw_42.getText().toString());
                 datosAEnviar.putString("nombre",ui4.getText().toString());
 
                 // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -662,7 +685,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", txvw_42.getText().toString());
                 datosAEnviar.putString("nombre",ui4.getText().toString());
 
                 // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -698,7 +721,9 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                //datosAEnviar.putInt("edad", 21);
+                //text_detail_car
+                datosAEnviar.putString("edad", text_detail_car.getText().toString());
                 datosAEnviar.putString("nombre",id1.getText().toString());
 
                // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -734,7 +759,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car.getText().toString());
                 datosAEnviar.putString("nombre",id1.getText().toString());
 
                 // Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -770,7 +795,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car1.getText().toString());
                 datosAEnviar.putString("nombre",id2.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -806,7 +831,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car1.getText().toString());
                 datosAEnviar.putString("nombre",id2.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -842,7 +867,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car2.getText().toString());
                 datosAEnviar.putString("nombre",id3.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -878,7 +903,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car2.getText().toString());
                 datosAEnviar.putString("nombre",id3.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -914,7 +939,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car3.getText().toString());
                 datosAEnviar.putString("nombre",id4.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -950,7 +975,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car3.getText().toString());
                 datosAEnviar.putString("nombre",id4.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -987,7 +1012,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car4.getText().toString());
                 datosAEnviar.putString("nombre",id5.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -1023,7 +1048,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car4.getText().toString());
                 datosAEnviar.putString("nombre",id5.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -1059,7 +1084,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car5.getText().toString());
                 datosAEnviar.putString("nombre",id6.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -1095,7 +1120,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad", text_detail_car5.getText().toString());
                 datosAEnviar.putString("nombre",id6.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -1121,6 +1146,79 @@ public class MainFragment extends Fragment {
             }
         });
 
+        card_view_image6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putString("edad", text_detail_car6.getText().toString());
+                datosAEnviar.putString("nombre",id7.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        card_view_image7.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putString("edad", text_detail_car7.getText().toString());
+                datosAEnviar.putString("nombre",id8.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+
         btndetail5.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -1131,7 +1229,7 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad",  txw_52.getText().toString());
                 datosAEnviar.putString("nombre",ui5.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
@@ -1167,8 +1265,81 @@ public class MainFragment extends Fragment {
                 datosAEnviar.putLong("id", 123L);
 
 // Y puedes pasarle más datos..
-                datosAEnviar.putInt("edad", 21);
+                datosAEnviar.putString("edad",  txw_52.getText().toString());
                 datosAEnviar.putString("nombre",ui5.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+
+        btndetail6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putString("edad",  txw_62.getText().toString());
+                datosAEnviar.putString("nombre",ui6.getText().toString());
+
+                //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
+
+                //
+                //android.app.Fragment nuevoFragmento = new GridFragment();
+                //nuevoFragmento.setArguments(datosAEnviar);
+                //android.app.FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.main_content, nuevoFragmento);
+                //transaction.addToBackStack(null);
+                //
+
+                // Crea el nuevo fragmento y la transacción.
+                Fragment nuevoFragmento = new ViewInvFragment();
+                nuevoFragmento.setArguments(datosAEnviar);
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.content, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
+            }
+        });
+
+        car_image61.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Bundle datosAEnviar = new Bundle();
+// Aquí pon todos los datos que quieras en formato clave, valor
+                datosAEnviar.putLong("id", 123L);
+
+// Y puedes pasarle más datos..
+                datosAEnviar.putString("edad",  txw_62.getText().toString());
+                datosAEnviar.putString("nombre",ui6.getText().toString());
 
                 //Toast.makeText(getActivity(), ui3.getText().toString(), Toast.LENGTH_SHORT).show();
 
@@ -1226,20 +1397,147 @@ public class MainFragment extends Fragment {
 
                 String detalle =  dataSnapshot.child("Detalle").getValue().toString();
 
+                String ofertado = dataSnapshot.child("Oferta").getValue().toString();
+
+                String ElLuxury = dataSnapshot.child("Luxury").getValue().toString();
+
                 String ui =  dataSnapshot.getKey();
+
+                if (ofertado.equals("true")   ){
+                    Laoferta = Laoferta + 1 ;
+                  //   Toast.makeText(getActivity(),"Vehiculos en Oferta "  +Laoferta, Toast.LENGTH_SHORT).show();
+                }
+
+                if (ElLuxury.equals("true")   ){
+                    MiLuxury = MiLuxury + 1 ;
+                   // Toast.makeText(getActivity(),"Vehiculos de Lujo "  +MiLuxury, Toast.LENGTH_SHORT).show();
+                }
+
+
+               // if (ofertado.equals("true") & Micontador == 0){
+                if (Laoferta.equals(1) & ElLuxury.equals("false")& ofertado.equals("true") ) {
+                    Micontador = Micontador + 1;
+
+                    Glide.with(getActivity())
+                              .load(Imagen)
+                             .into(imageView);
+
+                     textView.setText("$ "+precio);
+                     textView1.setText(vehiculo);
+                     textView2.setText(detalle);
+                    ui1.setText(ui);
+                    // Toast.makeText(getActivity(), Noferta, Toast.LENGTH_SHORT).show();
+                    oferta.setVisibility(View.VISIBLE);
+                }
+
+                if (Laoferta.equals(2)  & ElLuxury.equals("false") & ofertado.equals("true") ){
+
+                    Micontador = Micontador + 1;
+
+                   //  Toast.makeText(getActivity(),"Vehiculo Segunda oferta" + vehiculo + "El numero " + Micontador, Toast.LENGTH_SHORT).show();
+
+
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(imageView1);
+
+                    textView5.setText("$ "+precio);
+                    textView3.setText(vehiculo);
+                    textView4.setText(detalle);
+                    ui2.setText(ui);
+                    oferta1.setVisibility(View.VISIBLE);
+                }
+
+                if (Laoferta.equals(3)  & ElLuxury.equals("false") & ofertado.equals("true") ){
+
+                    Micontador = Micontador + 1;
+
+                  //  Toast.makeText(getActivity(),"La Longitud" + vehiculo + "El numero " + Mioferta, Toast.LENGTH_SHORT).show();
+
+                    if (Mioferta == 0){
+                        Mioferta = Mioferta + 1;
+                        Glide.with(getActivity())
+                                .load(Imagen)
+                                .into(imageView2);
+
+                        textView6.setText("$ "+precio);
+                        textView8.setText(vehiculo);
+                        textView7.setText(detalle);
+                        ui3.setText(ui);
+                        oferta2.setVisibility(View.VISIBLE);
+                    }
+
+
+                }
+
+                if (MiLuxury.equals(1)  & ofertado.equals("false") & ElLuxury.equals("true") ){
+
+                    //  Toast.makeText(getActivity(),"La Longitud" + vehiculo + "El numero " + Mioferta, Toast.LENGTH_SHORT).show();
+
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image41);
+
+                    txt_price41.setText("$ "+precio);
+
+                    txvw_41.setText(vehiculo);
+                    txvw_42.setText(detalle);
+                    ui4.setText(ui);
+
+                    luxury.setVisibility(View.VISIBLE);
+
+                }
+
+                if (MiLuxury.equals(2)  & ofertado.equals("false") & ElLuxury.equals("true")){
+
+                    //  Toast.makeText(getActivity(),"La Longitud" + vehiculo + "El numero " + Mioferta, Toast.LENGTH_SHORT).show();
+
+                    txw_51.setText(vehiculo);
+                    txw_52.setText(detalle);
+                    ui5.setText(ui);
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image51);
+                    txt_price51.setText("$ "+precio);
+
+                    luxury1.setVisibility(View.VISIBLE);
+
+                }
+
+                if (MiLuxury.equals(3)  & ofertado.equals("false")& ElLuxury.equals("true") ){
+
+                    //  Toast.makeText(getActivity(),"La Longitud" + vehiculo + "El numero " + Mioferta, Toast.LENGTH_SHORT).show();
+
+                    txw_61.setText(vehiculo);
+                    txw_62.setText(detalle);
+
+                    ui6.setText(ui);
+                    txt_price61.setText("$ "+precio);
+
+                    Glide.with(getActivity())
+                            .load(Imagen)
+                            .into(car_image61);
+
+                    luxury2.setVisibility(View.VISIBLE);
+
+
+                }
+
+
+
 
                 if (numero == 1){
 
                 Frame1.setVisibility(View.VISIBLE);
                 Frame2.setVisibility(View.VISIBLE);
 
-                Glide.with(getActivity())
-                        .load(Imagen)
-                        .into(imageView);
+             //   Glide.with(getActivity())
+              //          .load(Imagen)
+               //         .into(imageView);
 
-                textView.setText("$ "+precio);
-                textView1.setText(vehiculo);
-                textView2.setText(detalle);
+               // textView.setText("$ "+precio);
+               // textView1.setText(vehiculo);
+               // textView2.setText(detalle);
 
                 car_one.setVisibility(View.VISIBLE);
 
@@ -1251,7 +1549,7 @@ public class MainFragment extends Fragment {
                 text_car.setText(vehiculo);
                 text_detail_car.setText(detalle);
 
-                ui1.setText(ui);
+              //  ui1.setText(ui);
                 id1.setText(ui);
 
 
@@ -1259,13 +1557,13 @@ public class MainFragment extends Fragment {
 
                 if (numero == 2 ){
 
-                    Glide.with(getActivity())
-                            .load(Imagen)
-                            .into(imageView1);
+                 //  Glide.with(getActivity())
+                  //          .load(Imagen)
+                   //         .into(imageView1);
 
-                    textView5.setText("$ "+precio);
-                    textView3.setText(vehiculo);
-                    textView4.setText(detalle);
+                   // textView5.setText("$ "+precio);
+                  //  textView3.setText(vehiculo);
+                  //  textView4.setText(detalle);
 
                     car_two.setVisibility(View.VISIBLE);
 
@@ -1277,20 +1575,14 @@ public class MainFragment extends Fragment {
                     text_car1.setText(vehiculo);
                     text_detail_car1.setText(detalle);
 
-                    ui2.setText(ui);
+
                     id2.setText(ui);
 
                 }
 
                 if (numero == 3){
 
-                    Glide.with(getActivity())
-                            .load(Imagen)
-                            .into(imageView2);
 
-                    textView6.setText("$ "+precio);
-                    textView8.setText(vehiculo);
-                    textView7.setText(detalle);
 
                     car_tree.setVisibility(View.VISIBLE);
 
@@ -1302,7 +1594,7 @@ public class MainFragment extends Fragment {
                     text_car2.setText(vehiculo);
                     text_detail_car2.setText(detalle);
 
-                    ui3.setText(ui);
+
 
                     id3.setText(ui);
 
@@ -1316,19 +1608,11 @@ public class MainFragment extends Fragment {
                             .load(Imagen)
                             .into(card_view_image3);
 
-                    Glide.with(getActivity())
-                            .load(Imagen)
-                            .into(car_image41);
 
-                    txt_price41.setText("$ "+precio);
-
-                    txvw_41.setText(vehiculo);
-                    txvw_42.setText(detalle);
                     price_car3.setText("$ "+precio);
                     text_car3.setText(vehiculo);
                     text_detail_car3.setText(detalle);
 
-                    ui4.setText(ui);
 
                     id4.setText(ui);
 
@@ -1336,13 +1620,7 @@ public class MainFragment extends Fragment {
 
                 if (numero == 5){
 
-                    txw_51.setText(vehiculo);
-                    txw_52.setText(detalle);
-                    ui5.setText(ui);
-                    Glide.with(getActivity())
-                            .load(Imagen)
-                            .into(car_image51);
-                    txt_price51.setText("$ "+precio);
+
 
                     car_five.setVisibility(View.VISIBLE);
 
@@ -1360,15 +1638,6 @@ public class MainFragment extends Fragment {
 
                 if (numero == 6){
 
-                    txw_61.setText(vehiculo);
-                    txw_62.setText(detalle);
-
-                    ui6.setText(ui);
-                    txt_price61.setText("$ "+precio);
-
-                    Glide.with(getActivity())
-                            .load(Imagen)
-                            .into(car_image61);
 
 
                     car_six.setVisibility(View.VISIBLE);

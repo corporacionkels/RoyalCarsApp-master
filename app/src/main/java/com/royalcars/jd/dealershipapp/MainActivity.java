@@ -159,7 +159,8 @@ public class MainActivity extends AppCompatActivity
                 transaction.replace(R.id.content, new MeetTheTeamFragment(), "team");
                 transaction.addToBackStack(null);
             } else if(!selectedFragment.isVisible()) {
-                transaction.replace(R.id.content, selectedFragment);
+                transaction.replace(R.id.content, new MeetTheTeamFragment(), "team");
+                //transaction.replace(R.id.content, selectedFragment);
                 transaction.addToBackStack(null);
             }
         } else if (id == R.id.nav_credits) {

@@ -54,7 +54,7 @@ public class ViewInvFragment extends Fragment {
 
     Boolean datos ;
 
-    String imageUi;
+    String imageUi,txtdescription;
 
     DatabaseReference mRequest;
 
@@ -63,7 +63,7 @@ public class ViewInvFragment extends Fragment {
 
     ImageView car_image , car_image1 , car_image2 , car_image3 , car_image4 , car_image5 , ImageReturn;
 
-    TextView model , model1 , model2 , model3, model4,model5;
+    TextView model , model1 , model2 , model3, model4,model5,tvdescription;
 
     Integer numero = 0;
 
@@ -152,7 +152,7 @@ public class ViewInvFragment extends Fragment {
             datos = true ;
             // Y ahora puedes recuperar usando get en lugar de put
             long id = datosRecuperados.getLong("id");
-            int edad = datosRecuperados.getInt("edad");
+            String edad = datosRecuperados.getString("edad");
             String nombre = datosRecuperados.getString("nombre");
             // Imprimimos, pero en tu caso haz lo necesario
             Log.d("GastosFragmentEditar", "El ID: " + id);
@@ -160,6 +160,7 @@ public class ViewInvFragment extends Fragment {
             Log.d("GastosFragmentEditar", "El nombre: " + nombre);
 
             imageUi = nombre.replaceAll(" ","");
+            txtdescription = edad;
         }
 
 
@@ -190,6 +191,9 @@ public class ViewInvFragment extends Fragment {
 
         ImageReturn= view.findViewById(R.id.imagereturn);
 
+        tvdescription = view.findViewById(R.id.vehicleDesc);
+
+
 
         String CodigoUi = "-MbRTqqMs97LFxJg8JOH";
 
@@ -219,7 +223,7 @@ public class ViewInvFragment extends Fragment {
 
         nDialog = new ProgressDialog(getActivity());
         nDialog.setMessage("Por Favor Espere..");
-        nDialog.setTitle("Cargando Detalle del Vehculo");
+        nDialog.setTitle("Cargando Detalle del Vehiculo");
         nDialog.setIndeterminate(false);
         nDialog.setCancelable(true);
         nDialog.show();
@@ -236,6 +240,8 @@ public class ViewInvFragment extends Fragment {
                 if(!dataSnapshot.exists()){return;}
 
                 numero = numero + 1;
+
+                tvdescription.setText(txtdescription);
 
                 String Imagen = dataSnapshot.child("imageUrl").getValue().toString();
 

@@ -150,6 +150,8 @@
                         android:orientation="horizontal"
                         android:padding="8dp">
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/oferta_cardview"
+                            android:visibility="gone"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="4dp"
@@ -214,6 +216,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView12"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -335,6 +338,8 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/oferta_cardview1"
+                            android:visibility="gone"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="4dp"
@@ -399,6 +404,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView22"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -520,6 +526,8 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/oferta_cardview2"
+                            android:visibility="gone"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="4dp"
@@ -584,6 +592,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView32"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -717,6 +726,8 @@
                         android:orientation="horizontal"
                         android:padding="8dp">
                         <androidx.cardview.widget.CardView
+                            android:visibility="gone"
+                            android:id="@+id/luxury_cardview"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="4dp"
@@ -760,7 +771,7 @@
                                         android:text="BMW X4 Sports"
                                         android:maxLength="40"
                                         android:textColor="#000000"
-                                        android:textSize="14sp"
+                                        android:textSize="12sp"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -781,6 +792,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView42"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -902,6 +914,8 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:visibility="gone"
+                            android:id="@+id/luxury_cardview1"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             app:cardCornerRadius="4dp"
@@ -945,7 +959,7 @@
                                         android:text="BMW X4 Sports"
                                         android:maxLength="30"
                                         android:textColor="#000000"
-                                        android:textSize="14sp"
+                                        android:textSize="12sp"
                                         android:textStyle="bold" />
 
                                     <TextView
@@ -966,6 +980,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView52"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1087,6 +1102,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
+                            android:id="@+id/luxury_cardview2"
                             android:visibility="gone"
                             android:layout_width="300dp"
                             android:layout_height="wrap_content"
@@ -1099,7 +1115,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
-
+                                <com.royalcars.jd.dealershipapp.ScrollViewText
+                                    android:id="@+id/txtPoemProgramatically6"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="LUXURY LUXURY LUXURY LUXURY"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="30sp"
+                                    android:textStyle="italic"
+                                    android:background="@drawable/background_sold"
+                                    android:elevation="16dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
+                                    tools:layout_editor_absoluteX="0dp"
+                                    android:layout_marginTop="-1dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    android:layout_marginBottom="8dp"
+                                    tools:ignore="MissingConstraints" />
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1137,6 +1168,7 @@
                                 </LinearLayout>
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/textView62"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1250,22 +1282,7 @@
                                         android:textSize="16sp" />
 
                                 </RelativeLayout>
-                                <com.royalcars.jd.dealershipapp.ScrollViewText
-                                    android:id="@+id/txtPoemProgramatically6"
-                                    android:layout_width="fill_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="LUXURY LUXURY LUXURY LUXURY"
-                                    android:textColor="@color/color_black"
-                                    android:textSize="30sp"
-                                    android:textStyle="italic"
-                                    android:background="@drawable/background_sold"
-                                    android:elevation="16dp"
-                                    app:layout_constraintTop_toBottomOf="@+id/txtPoem"
-                                    tools:layout_editor_absoluteX="0dp"
-                                    android:layout_marginTop="-1dp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    android:layout_marginBottom="8dp"
-                                    tools:ignore="MissingConstraints" />
+
                             </LinearLayout>
 
 
@@ -1479,6 +1496,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1604,6 +1622,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car1"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1735,6 +1754,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car2"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1859,6 +1879,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car3"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -1989,6 +2010,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car4"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2113,6 +2135,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car5"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2243,6 +2266,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car6"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2367,6 +2391,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car7"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2497,6 +2522,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car8"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -2621,6 +2647,7 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/text_detail_car9"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
